@@ -6,17 +6,28 @@ const siteUrl = "https://sumityadav-one.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+
   title: {
     default: "Sumit Yadav | Official Website",
     template: "%s | Sumit Yadav",
   },
+
   description:
     "Official personal website of Sumit Yadav, a web developer focused on React.js, JavaScript and full-stack web projects. Visit the portfolio, projects and professional profiles.",
+
   applicationName: "Sumit Yadav Official Website",
   authors: [{ name: "Sumit Yadav", url: siteUrl }],
   creator: "Sumit Yadav",
   publisher: "Sumit Yadav",
-  alternates: { canonical: "/" },
+
+  alternates: {
+    canonical: "/",
+  },
+
+  verification: {
+    google: "KQa3A7qnIgCeP2tKYXCnuQYSA9WvTSEX",
+  },
+
   robots: {
     index: true,
     follow: true,
@@ -28,6 +39,7 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+
   openGraph: {
     type: "profile",
     url: siteUrl,
@@ -37,6 +49,7 @@ export const metadata: Metadata = {
     siteName: "Sumit Yadav",
     locale: "en_IN",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Sumit Yadav | Official Website",
@@ -71,7 +84,7 @@ const personSchema = {
   ],
   sameAs: [
     "https://sumityadavportfolio1.netlify.app/",
-    "https://github.com/sumityadav292"
+    "https://github.com/sumityadav292",
   ],
 };
 
@@ -83,7 +96,9 @@ export default function RootLayout({
       <body>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema),
+          }}
         />
         {children}
       </body>
