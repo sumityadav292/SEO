@@ -1,8 +1,9 @@
+
 import type { Metadata, Viewport } from "next";
-// @ts-expect-error Next.js provides the global CSS type declarations at build/runtime.
 import "./globals.css";
 
 const siteUrl = "https://sumityadav-one.vercel.app";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
